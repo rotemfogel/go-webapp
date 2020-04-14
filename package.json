@@ -1,0 +1,29 @@
+{
+  "name": "go_web_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": " "
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rotemfogel/go-webapp/issues"
+  },
+  "homepage": "https://github.com/rotemfogel/go-webapp#readme",
+  "dependencies": {
+    "grunt-sass": "^3.1.0",
+    "zurb-foundation-5": "^5.4.7"
+  },
+  "devDependencies": {
+    "grunt": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "load-grunt-tasks": "^5.1.0"
+  }
+}
