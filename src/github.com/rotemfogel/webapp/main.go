@@ -8,12 +8,15 @@ import (
 )
 
 func main() {
-	http.Handle("/img", http.FileServer(http.Dir("public")))
-	http.Handle("/css", http.FileServer(http.Dir("public")))
+	http.Handle("/img/", http.FileServer(http.Dir("public")))
+	http.Handle("/css/", http.FileServer(http.Dir("public")))
 
 	templates := populateTemplates()
 	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
 		f := request.URL.Path[1:]
+		if len(f) == 0 {
+			f = "home"
+		}
 		var t *template.Template
 		if strings.HasSuffix(f, "html") {
 			t = templates.Lookup(f)
